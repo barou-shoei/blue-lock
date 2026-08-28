@@ -4,135 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blue Lock | O melhor atacante do mundo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Tropicália</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class=" p-5">
+    <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
 
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/tim-maia323.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
+    <header class="cabecalho">
+        <nav class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <a href="#inicio" class="logo-link">
+                <img src="img/emblema.jpg" class="nav-img" alt="Emblema inspirado em Blue Lock" width="64" height="64">
+                <span class="logo-texto">BLUE LOCK</span>
+            </a>
+
+            <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projeto">O projeto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Jogadores</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
+
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-acessibilidade fw-bold rotacao-botao" aria-expanded="false">
+                    Acessibilidade
+                </button>
                 <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
+                    <button id="aumentar-fonte" class="btn btn-acessibilidade fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+                    <button id="diminuir-fonte" class="btn btn-acessibilidade fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+                    <button id="alterna-contraste" class="btn btn-acessibilidade fw-bold" aria-label="Alternar o contraste de cores">
+                        <i class="bi bi-circle-half"></i>
+                    </button>
                 </div>
             </div>
         </nav>
-       
     </header>
 
-
-    <main class="container my-5">
-
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1
-                    <img src="img/" class="mb-3" width="563"
-                    <img src="img/" class="mb-3" width="563"
-                    <img src="img/tim-maia535.jpeg" class="mb-3" width="563"
-                    height="278" loading="lazy">
-                    <a href="#tim-maia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/tim.maia1.jpg" alt="A imagem apresenta o cantor Tim Maia" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
-
-              </div>
-        </section>
-        <section id="tim-maia" class="my-5 pt-6 secao-tim.maia" tabindex="0" aria-label="Seção explicativa sobre o Tim Maia">
-        <section id="tim-maia" class="my-5 pt-6 secao-tim-maia" tabindex="0" aria-label="Seção explicativa sobre o Tim Maia">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/tim.maia6.jpeg" class="rounded-pill" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>Quem foi Tim Maia?</h2>
-                    <p class="p-2">Tim Maia foi um cantor e compositor brasileiro,
-                     famoso por sua voz marcante e por misturar soul, funk e MPB. Nascido em 1948 no Rio de Janeiro, ele se destacou nos anos 
-                     70 com sucessos como "Me Dê Motivos" e "Gostava Tanto de Você". Conhecido também por sua personalidade excêntrica e comportamento polêmico, Tim Maia se tornou um ícone da música brasileira.
-                     Faleceu em 1998, mas sua obra continua a influenciar a música nacional.</p>
+    <main>
+        <section id="inicio" class="secao-inicio">
+            <div class="inicio-fundo">
+                <img src="img/hero-chute.jpg" alt="" class="inicio-bg" aria-hidden="true">
+                <div class="inicio-sombra"></div>
+                <div class="container inicio-conteudo">
+                    <p class="selo">Projeto fictício · Anime de futebol</p>
+                    <h1>Desperte o seu <span>ego</span></h1>
+                    <p class="inicio-texto">
+                        300 atacantes. Um objetivo. Nasce aqui o camisa 9 que vai mudar o futebol japonês.
+                    </p>
+                    <a href="#projeto" class="btn botao-inicio">Quero conhecer!</a>
                 </div>
             </div>
         </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/tim.maia2.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
+        <section id="projeto" class="secao-projeto" tabindex="0" aria-label="Seção explicativa sobre o Blue Lock">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-5 text-center">
+                        <img src="img/isagi-retrato.jpg" class="img-projeto" alt="Atacante inspirado em Yoichi Isagi segurando uma bola">
                     </div>
-                    <div class="col-md-4">
-                        <img src="img/tim.maia3.jpeg" class="img-fluid rounded-5"
-                            loading="lazy">
+                    <div class="col-md-7">
+                        <p class="selo">O que é Blue Lock?</p>
+                        <h2>Uma prisão azul para criar o melhor atacante</h2>
+                        <p>
+                            Depois de uma eliminação difícil da seleção do Japão, a federação cria um plano ousado:
+                            reunir 300 jovens atacantes em uma instalação secreta chamada <strong>Blue Lock</strong>.
+                        </p>
+                        <p>
+                            O protagonista <strong>Yoichi Isagi</strong> entra no projeto depois de hesitar no momento decisivo.
+                            Lá dentro, ele precisa aprender a pensar como um finalizador: ler o campo, decidir rápido
+                            e chutar quando a chance aparecer.
+                        </p>
+                        <ul class="lista-ego">
+                            <li><i class="bi bi-lightning-charge-fill"></i> Treinos e jogos que testam decisão e visão de jogo</li>
+                            <li><i class="bi bi-bullseye"></i> Foco total em criar o camisa 9 mais letal do mundo</li>
+                            <li><i class="bi bi-people-fill"></i> Rivais como Bachira, Kunigami, Chigiri e Barou</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/tim.maia4.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/tim.maia5.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
+            </div>
         </section>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
+        <section id="galeria" class="secao-galeria" tabindex="0" aria-label="Galeria de jogadores">
+            <div class="container">
+                <p class="selo text-center">Time Z e rivais</p>
+                <h2 class="text-center">Jogadores em campo</h2>
+                <p class="texto-galeria text-center">
+                    Ilustrações originais inspiradas no visual do anime. Não são artes oficiais.
+                </p>
+
+                <div class="row g-4">
+                    <article class="col-md-6 col-lg-3">
+                        <figure class="card-jogador">
+                            <img src="img/bachira.jpg" alt="Jogador de cabelo castanho driblando com energia ciano e dourada">
+                            <figcaption>
+                                <h3>Meguru Bachira</h3>
+                                <p>Drible imprevisível e criatividade pura.</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <figure class="card-jogador">
+                            <img src="img/kunigami.jpg" alt="Jogador de cabelo laranja chutando a bola com força">
+                            <figcaption>
+                                <h3>Rensuke Kunigami</h3>
+                                <p>Chute poderoso e espírito de herói.</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <figure class="card-jogador">
+                            <img src="img/velocista.jpg" alt="Jogador de cabelo rosa correndo em alta velocidade">
+                            <figcaption>
+                                <h3>Hyoma Chigiri</h3>
+                                <p>Velocidade explosiva na ponta.</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="col-md-6 col-lg-3">
+                        <figure class="card-jogador">
+                            <img src="img/barou.jpg" alt="Jogador de olhar intenso de braços cruzados">
+                            <figcaption>
+                                <h3>Shoei Barou</h3>
+                                <p>O rei da área: finalização egoísta.</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-campo">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <img src="img/instalacao.jpg" class="img-campo" alt="Campo interno futurista com luzes ciano">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>A instalação</h2>
+                        <p>
+                            O Blue Lock é um complexo fechado, com campos, dormitórios e desafios constantes.
+                            Quem não evolui é eliminado. Quem permanece precisa provar, a cada partida,
+                            que merece a camisa da seleção.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="secao-contato">
+            <div class="container">
+                <div class="formulario">
+                    <h2>Entre em contato</h2>
+                    <p>Mande uma mensagem para o projeto fictício da escola.</p>
+                    <form id="form-contato">
+                        <div class="mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
+                        <div class="mb-3">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
                         </div>
-                        <div class="form-group mb-3">
+                        <div class="mb-3">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="4" placeholder="Qual o seu estilo de jogo?" required></textarea>
                         </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
+                        <button type="submit" class="btn botao-inicio w-100">Enviar mensagem</button>
+                        <p id="aviso-form" class="aviso-form" hidden>Mensagem registrada neste projeto fictício. Obrigado!</p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="text-center p-3 fst-italic">
+
+    <footer class="rodape">
         <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+        <div class="redes">
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+        <p class="credito">Projeto escolar inspirado em Blue Lock. Sem fins comerciais. Ilustrações originais.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="script.js"></script>
-  
 </body>
 
 </html>

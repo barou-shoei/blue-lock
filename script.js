@@ -1,43 +1,50 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
-    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
- 
-    botaoDeAcessibilidade.addEventListener('click', function (){
-     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
-     opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
- 
-     const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-     botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
-   
-    })
- 
-     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
-     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
-     
-     const alternaContraste = document.getElementById('alterna-contraste')
- 
-     let tamanhoAtualFonte = 1;
- 
-     aumentaFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte += 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     diminuiFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte -= 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     alternaContraste.addEventListener('click', function(){
-         document.body.classList.toggle('alto-contraste')
-     })
- 
- 
- })
- 
- ScrollReveal().reveal('#inicio', { delay: 500 });
- ScrollReveal().reveal('#tropicalia', { delay: 500 });
- ScrollReveal().reveal('#galeria', { delay: 500 });
- ScrollReveal().reveal('#contato', { delay: 500 });
+const botaoAcessibilidade = document.getElementById("botao-acessibilidade");
+const opcoesAcessibilidade = document.getElementById("opcoes-acessibilidade");
+const botaoAumentar = document.getElementById("aumentar-fonte");
+const botaoDiminuir = document.getElementById("diminuir-fonte");
+const botaoContraste = document.getElementById("alterna-contraste");
+const formulario = document.getElementById("form-contato");
+const avisoForm = document.getElementById("aviso-form");
+
+let tamanhoFonte = 1;
+
+botaoAcessibilidade.addEventListener("click", () => {
+    const aberto = botaoAcessibilidade.getAttribute("aria-expanded") === "true";
+    botaoAcessibilidade.setAttribute("aria-expanded", String(!aberto));
+    opcoesAcessibilidade.classList.toggle("apresenta-lista");
+    botaoAcessibilidade.classList.toggle("rotacao-botao");
+});
+
+botaoAumentar.addEventListener("click", () => {
+    if (tamanhoFonte < 1.4) {
+        tamanhoFonte += 0.1;
+        document.documentElement.style.setProperty("--fonte-base", `${tamanhoFonte}rem`);
+    }
+});
+
+botaoDiminuir.addEventListener("click", () => {
+    if (tamanhoFonte > 0.8) {
+        tamanhoFonte -= 0.1;
+        document.documentElement.style.setProperty("--fonte-base", `${tamanhoFonte}rem`);
+    }
+});
+
+botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("alto-contraste");
+});
+
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    avisoForm.hidden = false;
+    formulario.reset();
+});
+
+if (window.ScrollReveal) {
+    ScrollReveal().reveal(".inicio-conteudo, .img-projeto, .secao-projeto h2, .card-jogador, .img-campo, .formulario", {
+        distance: "40px",
+        duration: 900,
+        easing: "ease-out",
+        origin: "bottom",
+        interval: 120
+    });
+}

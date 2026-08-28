@@ -1,4 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --azul: #14e1ff;
+    --azul-escuro: #07202c;
+    --preto: #05070b;
+    --verde: #0b1c18;
+    --texto: #e8f6ff;
+    --muted: #9db6c4;
+    --fonte-base: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-size: var(--fonte-base);
+    background: var(--preto);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo-texto, .selo {
+    font-family: "Orbitron", sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--azul);
+    color: #000;
+    padding: 0.6rem 1rem;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 0;
+    background: rgba(5, 7, 11, 0.92);
+    border-bottom: 1px solid rgba(20, 225, 255, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--texto);
+}
+
+.nav-img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--azul);
+}
+
+.logo-texto {
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--azul);
+}
+
+.nav-link {
+    color: var(--texto) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--azul) !important;
+}
+
+.menu-acessibilidade {
+    position: relative;
+}
+
+.btn-acessibilidade {
+    background: var(--azul);
+    color: #041016;
+    border: none;
+}
+
+.btn-acessibilidade:hover,
+.btn-acessibilidade:focus {
+    background: #9af6ff;
+    color: #041016;
+}
+
+.opcoes-acessibilidade {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    background: #0c1820;
+    border: 1px solid var(--azul);
+    border-radius: 12px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+.rotacao-botao {
+    transform: rotate(-2deg);
+}
+
+.secao-inicio {
+    min-height: 88vh;
+}
+
+.inicio-fundo {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.inicio-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inicio-sombra {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(5, 7, 11, 0.92) 8%, rgba(5, 7, 11, 0.35) 60%, rgba(5, 7, 11, 0.7) 100%);
+}
+
+.inicio-conteudo {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 6rem;
+}
+
+.selo {
+    display: inline-block;
+    color: var(--azul);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-bottom: 0.8rem;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    max-width: 12ch;
+}
+
+h1 span {
+    color: var(--azul);
+}
+
+.inicio-texto {
+    max-width: 34rem;
+    color: #d7eef8;
+    font-size: 1.15rem;
+}
+
+.botao-inicio {
+    background: var(--azul);
+    color: #041016;
+    font-weight: 700;
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.botao-inicio:hover,
+.botao-inicio:focus {
+    background: #9af6ff;
+    color: #041016;
+}
+
+.secao-projeto,
+.secao-galeria,
+.secao-campo,
+.secao-contato {
+    padding: 5rem 0;
+}
+
+.img-projeto {
+    width: min(100%, 340px);
+    border-radius: 160px 160px 40px 40px;
+    border: 3px solid var(--azul);
+    box-shadow: 0 0 40px rgba(20, 225, 255, 0.25);
+}
+
+.lista-ego {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+}
+mport url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
@@ -40,161 +258,139 @@ section {
     padding: 40px;
     margin: 0 auto;
 }
-
-/* posicionamento para a imagem à direita */
-.img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
+.lista-ego li {
+    margin-bottom: 0.7rem;
 }
 
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+.lista-ego i {
+    color: var(--azul);
+    margin-right: 0.45rem;
 }
 
-
-.botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    height: 3em;
-    align-content: center;
-
+.texto-galeria {
+    color: var(--muted);
+    max-width: 36rem;
+    margin: 0 auto 2rem;
 }
 
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+.card-jogador {
+    margin: 0;
+    background: #0b141b;
+    border: 1px solid rgba(20, 225, 255, 0.2);
+    border-radius: 22px;
+    overflow: hidden;
+    height: 100%;
 }
 
-
-#tim-maia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
+.card-jogador img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
 }
 
-#tim-maia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
+.card-jogador figcaption {
+    padding: 1rem 1.1rem 1.2rem;
 }
 
-
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+.card-jogador h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
 }
 
-#galeria {
-    background-color: #15dbba;
-
+.card-jogador p {
+    margin: 0;
+    color: var(--muted);
 }
 
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
-}
-
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
+.img-campo {
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid rgba(20, 225, 255, 0.25);
 }
 
 .formulario {
-    background-color: #412e2e;
-    padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
-    border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
-    font-weight: bold;
-}
-
-.formulario button {
-    background-color: #5c925e;
-    border: none;
-    font-weight: bold;
+    max-width: 680px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #0d1a22, #081016);
+    border: 1px solid rgba(20, 225, 255, 0.3);
+    border-radius: 28px;
+    padding: 2.2rem;
 }
 
 .form-control {
-    background-color: #85124b;
-}
-.menu-acessibilidade{
-    position: fixed;
-    top:2rem;
-    right:20px;
-    z-index: 1000;
+    background: #061016;
+    border: 1px solid #1d3a46;
+    color: var(--texto);
+    border-radius: 12px;
 }
 
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
+.form-control:focus {
+    background: #061016;
+    color: var(--texto);
+    border-color: var(--azul);
+    box-shadow: 0 0 0 0.2rem rgba(20, 225, 255, 0.2);
 }
 
-.opcoes-acessibilidade{
-    margin-top:10px;
+.aviso-form {
+    margin-top: 1rem;
+    color: var(--azul);
+}
+
+.rodape {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(20, 225, 255, 0.2);
+}
+
+.redes {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
 }
 
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
-}
-.apresenta-lista{
-    display: none;
+.redes a {
+    color: var(--azul);
 }
 
-.alto-contraste{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.credito {
+    color: var(--muted);
+    font-style: italic;
 }
 
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste .formulario{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+body.alto-contraste {
+    background: #000;
+    color: #fff;
 }
 
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
+body.alto-contraste .cabecalho,
+body.alto-contraste .formulario,
+body.alto-contraste .card-jogador {
+    background: #000;
+    border-color: #fff;
 }
 
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary{
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
+body.alto-contraste .nav-link,
+body.alto-contraste .logo-texto,
+body.alto-contraste .selo,
+body.alto-contraste h1 span,
+body.alto-contraste .redes a {
+    color: #ffe600 !important;
 }
 
-.alto-contraste #tropicalia {
-    background: none;
+body.alto-contraste .botao-inicio,
+body.alto-contraste .btn-acessibilidade {
+    background: #ffe600;
+    color: #000;
 }
 
-.alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
-}
-.alto-contraste .fundo-galeria {
-    background: none;
+@media (max-width: 768px) {
+    .inicio-conteudo {
+        padding-bottom: 3rem;
+    }
+
+    .card-jogador img {
+        height: 260px;
+    }
 }
